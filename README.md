@@ -20,5 +20,5 @@ mfa align --clean ....your path/MLS_processed/mls_english/test/ english_us_mfa e
 
 ## prepara metadata for training
 Already prepared metadata is available at in **/metadata** folder OR \
-Use the code 'python prepare_metadata.py' to get train_metadata.csv, dev_metadata.csv, and test_metadata.csv for all the langauges separately. Change the paths in the code for various languages.
+Use the code ```python prepare_metadata.py``` to get train_metadata.csv, dev_metadata.csv, and test_metadata.csv for all the langauges separately. Change the paths in the code for various languages.
 
