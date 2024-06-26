@@ -1,6 +1,7 @@
 # SSL_AWE, coming soon!
 EACL 2024 -  **[Improving Acoustic Word Embeddings through Correspondence Training of Self-supervised Speech Representations](https://aclanthology.org/2024.eacl-long.118.pdf)**
 
+## Download data
 Download force-aligned dataset (timestamps, word list): **[MLS_force_aligned](https://drive.google.com/file/d/13bVpExtoQwxplFiQVvUALDvDVWjNsdHb/view?usp=sharing)** \
 Download corresponding speech corpora: https://www.openslr.org/94/ \
 Note: for english speech corpora, please download the partaa only (due to huge amount of data): https://dl.fbaipublicfiles.com/mls/mls_english_parts_list.txt
@@ -18,7 +19,13 @@ mfa align --clean ....your path/MLS_processed/mls_english/dev/ english_us_mfa en
 mfa align --clean ....your path/MLS_processed/mls_english/test/ english_us_mfa english_mfa ....your path/MLS_force_aligned/mls_english/test/ --output_format=csv --beam 100 --retry_beam 400
 ```
 
-## prepara metadata for training
+## Prepara metadata for training
 Already prepared metadata is available at in **/metadata** folder OR \
 Use the code ```python prepare_metadata.py``` to get train_metadata.csv, dev_metadata.csv, and test_metadata.csv for all the langauges separately. Change the paths in the code for various languages.
+
+## Extract and store ssl features
+### With context
+For HuBERT: ```python extract_ssl.py @config_files/extract_hubert.txt``` For Wav2vec: ```python extract_ssl.py @config_files/extract_wav2vec2.txt``` For WavLM: ```python extract_ssl.py @config_files/extract_wavlm.txt```
+### Without context
+For HuBERT: ```python extract_ssl_woc.py @config_files/extract_hubert.txt``` For Wav2vec: ```python extract_ssl_woc.py @config_files/extract_wav2vec2.txt`` `For WavLM: ```python extract_ssl_woc.py @config_files/extract_wavlm.txt```
 
