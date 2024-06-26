@@ -1,0 +1,6 @@
+--model=WAVLM_BASE
+--metadata_file_path=metadata/English
+--metadata_file_name=dev_metadata.csv,test_metadata.csv,train_metadata.csv
+--path_to_output=....your path/MLS_Features/english/wavlm_woc/
+--path_to_data=....your path/MLS/mls_english/
+--layer=12
