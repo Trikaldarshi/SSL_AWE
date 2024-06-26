@@ -7,10 +7,13 @@ Note: for english speech corpora, please download the partaa only (due to huge a
 
 #### Note
 If you want to force align the dataset yourself, you may use  the following commands to do so via [MFA toolkit](https://montreal-forced-aligner.readthedocs.io/en/latest/user_guide/workflows/alignment.html) \
-Please arrange the datafiles in the required format used in mfa directory structure
+Please arrange the datafiles in the required format used in mfa directory structure. You may use the code in ``` python prepare_data.py``` with some modification.
 ```
-conda activaet mfa
+conda activaet mfa ## create an environment with MFA toolkit installed
 mfa models download acoustic english_mfa
 mfa models download dictionary english_us_mfa
-mfa align [OPTIONS] CORPUS_DIRECTORY DICTIONARY_PATH ACOUSTIC_MODEL_PATH OUTPUT_DIRECTORY --output_format=csv --beam 100 --retry_beam 400
+
+mfa align --clean ....your path/MLS_processed/mls_english/train/ english_us_mfa english_mfa ....your path/MLS_force_aligned/mls_english/train/ --output_format=csv --beam 100 --retry_beam 400
+mfa align --clean ....your path/MLS_processed/mls_english/dev/ english_us_mfa english_mfa ....your path/MLS_force_aligned/mls_english/dev/ --output_format=csv --beam 100 --retry_beam 400
+mfa align --clean ....your path/MLS_processed/mls_english/test/ english_us_mfa english_mfa ....your path/MLS_force_aligned/mls_english/test/ --output_format=csv --beam 100 --retry_beam 400
 ```
