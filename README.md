@@ -25,7 +25,7 @@ Use the code ```python prepare_metadata.py``` to get train_metadata.csv, dev_met
 
 ## Extract and store SSL features
 ### With context
-For HuBERT: ```python extract_ssl.py @config_files/extract_hubert.txt``` For Wav2vec: ```python extract_ssl.py @config_files/extract_wav2vec2.txt``` For WavLM: ```python extract_ssl.py @config_files/extract_wavlm.txt```
+For HuBERT: ```python extract_ssl.py @config_files/extract_hubert.txt```, For Wav2vec: ```python extract_ssl.py @config_files/extract_wav2vec2.txt```, For WavLM: ```python extract_ssl.py @config_files/extract_wavlm.txt```
 ### Without context
-For HuBERT: ```python extract_ssl_woc.py @config_files/extract_hubert.txt``` For Wav2vec: ```python extract_ssl_woc.py @config_files/extract_wav2vec2.txt``` For WavLM: ```python extract_ssl_woc.py @config_files/extract_wavlm.txt```
+For HuBERT: ```python extract_ssl_woc.py @config_files/extract_hubert.txt```, For Wav2vec: ```python extract_ssl_woc.py @config_files/extract_wav2vec2.txt```, For WavLM: ```python extract_ssl_woc.py @config_files/extract_wavlm.txt```
 
