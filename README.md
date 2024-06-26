@@ -1,3 +1,2 @@
 # SSL_AWE, coming soon!
-This repo is for paper "Improving Acoustic Word Embeddings through Correspondence Training
-of Self-supervised Speech Representations" 
+EACL 2024 -  **[Improving Acoustic Word Embeddings through Correspondence Training of Self-supervised Speech Representations](https://aclanthology.org/2024.eacl-long.118.pdf)**
