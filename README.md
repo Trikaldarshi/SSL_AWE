@@ -25,7 +25,8 @@ mfa align --clean ....your path/MLS_processed/mls_english/train/ english_us_mfa 
 mfa align --clean ....your path/MLS_processed/mls_english/dev/ english_us_mfa english_mfa ....your path/MLS_force_aligned/mls_english/dev/ --output_format=csv --beam 100 --retry_beam 400
 mfa align --clean ....your path/MLS_processed/mls_english/test/ english_us_mfa english_mfa ....your path/MLS_force_aligned/mls_english/test/ --output_format=csv --beam 100 --retry_beam 400
 ```
-
+## Create conda environment
+conda create --name myenv --file spec-file.txt
 ## Prepara metadata for training
 Already prepared metadata is available at in **/metadata** folder OR \
 Use the code ```python prepare_metadata.py``` to get train_metadata.csv, dev_metadata.csv, and test_metadata.csv for all the langauges separately. Change the paths in the code for various languages.
