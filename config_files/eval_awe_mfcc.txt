@@ -1,0 +1,12 @@
+--model_name=MFCC
+--input_dim=60
+--metadata_file=/mnt/parscratch/users/acw21am/private/MLS_Features/french/mfcc/feature_metadata.csv
+--model_weights=../checkpoints/model_mfcc/english_mfcc_02/MFCC_128_BEST.pt
+--batch_size=256
+--embedding_dim=128
+--hidden_dim=256
+--distance=cosine
+--rnn_type=GRU
+--bidirectional=True
+--num_layers=4
+--dropout=0.2

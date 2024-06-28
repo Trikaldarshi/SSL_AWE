@@ -29,3 +29,22 @@ For HuBERT: ```python extract_ssl.py @config_files/extract_hubert.txt```, For Wa
 ### Without context
 For HuBERT: ```python extract_ssl_woc.py @config_files/extract_hubert.txt```, For Wav2vec: ```python extract_ssl_woc.py @config_files/extract_wav2vec2.txt```, For WavLM: ```python extract_ssl_woc.py @config_files/extract_wavlm.txt```
 
+### For MFCC
+```python extract_mfcc.py @config_files/extract_mfcc.txt```
+
+## Run AE and CAE models for various input features
+
+For HuBERT: ```python cae.py @config_files/cae_hubert.txt```, For wav2vec2: ```python cae.py @config_files/cae_wav2vec2.txt```, For WavLM: ```python cae.py @config_files/cae_wavlm.txt```, for MFCC: ```python cae.py @config_files/cae_mfcc.txt```
+
+Similarly for AE models.
+
+#### Note:
+Change the ```--metadata_file``` path with _woc (without context features) and _wc (with context) in /config_files/cae_** or /config_files/ae_**
+
+## Evaluate the models
+```python eval_awe.py @config_files/eval_awe.txt```
+#### Note:
+Change the ```--model_weights``` and ```--metadata_file``` according to Langauge and Model you want to evalaute for word-discrimination task.
+
+#### Evaluate with pooling mechanism:
+```python pooling_eval.py```, please change the ```metadata_filepath``` inside the code as per your need.
