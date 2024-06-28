@@ -8,7 +8,7 @@ Note: for english speech corpora, please download the partaa only (due to huge a
 
 #### Note
 If you want to force align the dataset yourself, you may use  the following commands to do so via [MFA toolkit](https://montreal-forced-aligner.readthedocs.io/en/latest/user_guide/workflows/alignment.html) \
-Please arrange the datafiles in the required format used in mfa directory structure. You may use the code in ``` python prepare_data.py``` with some modification.
+Please arrange the datafiles in the required format used in mfa directory structure. You may use the code in ``` python prepare_data.py``` with some modification to do that.
 ```
 conda activaet mfa ## create an environment with MFA toolkit installed
 mfa models download acoustic english_mfa
